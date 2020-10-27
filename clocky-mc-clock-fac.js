@@ -1,7 +1,7 @@
 //Given the angle (in degrees) of the hour-hand, return the time in HH:MM format. Round down to the nearest minute.
 
 
-let angle = 0 //->12:00
+// let angle = 0 //->12:00
 // let angle = 90//->03:00
 // let angle = 180//->06:00
 // let angle = 270//09:00
@@ -11,7 +11,7 @@ let angle = 0 //->12:00
 
 // let angle = 45// Expected: '01:30', instead got: '1.5:00'
 
-
+let angle = 0
 
 var whatTimeIsIt = function(angle) {
   // Your code here
@@ -19,11 +19,11 @@ var whatTimeIsIt = function(angle) {
   let hrs = ""
   let mins = "00"
 
-if (angle>360 || angle<1) {
-	hrs = 0
-} else {
-	hrs = angle / 30
-}
+	if (angle>=360 ) {
+		hrs = 0
+	} else {
+		hrs = angle / 30
+	}
 
 
   //si obtenemos decimales
