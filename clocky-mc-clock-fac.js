@@ -2,11 +2,11 @@
 
 
 // let angle = 0 //->12:00
-// let angle = 90//->03:00
+let angle = 90//->03:00
 // let angle = 180//->06:00
 // let angle = 270//09:00
 // let angle = 360//->12:00
-let angle = 40//// Expected: '01:20'
+// let angle = 40//// Expected: '01:20'
 
 
 // let angle = 45// Expected: '01:30', instead got: '1.5:00'
@@ -48,7 +48,9 @@ var whatTimeIsIt = function(angle) {
 
 
   res = hrs + ":" + mins
-	console.log(res);
+	if (res == '00:00') {
+		res = '12:00'
+	}
   return res;
 }
 whatTimeIsIt(angle)
