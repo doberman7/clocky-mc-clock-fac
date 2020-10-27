@@ -1,27 +1,32 @@
 //Given the angle (in degrees) of the hour-hand, return the time in HH:MM format. Round down to the nearest minute.
 
+//     Test.assertEquals(whatTimeIsIt(0), "12:00");
+//     Test.assertEquals(whatTimeIsIt(90), "03:00");
+//     Test.assertEquals(whatTimeIsIt(180), "06:00");
+//     Test.assertEquals(whatTimeIsIt(270), "09:00");
+//     Test.assertEquals(whatTimeIsIt(360), "12:00");
 
 // 12:00 <= 0 degrees
 // 03:00 <= 90 degrees
 // 06:00 <= 180 degrees
 // 09:00 <= 270 degrees
 // 12:00 <= 360 degrees
-let angle = 0
-// let angle = 90
+// let angle = 0
+let angle = 90
 // let angle = 180
 // let angle = 270
 // let angle = 360
 
 var whatTimeIsIt = function(angle) {
 	// Your code here
-	res=""
+	let res=""
 	let hrs=""
-	let mins=""
+	let mins="00"
 	if(angle==0){
 		hrs=12
-	}{
-		hrs = angle / 30
+	}else{
 
+		hrs = angle / 30
 	}
 	res=hrs+":"+mins
 
