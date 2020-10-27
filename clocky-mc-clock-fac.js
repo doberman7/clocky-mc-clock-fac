@@ -6,16 +6,12 @@
 //     Test.assertEquals(whatTimeIsIt(270), "09:00");
 //     Test.assertEquals(whatTimeIsIt(360), "12:00");
 
-// 12:00 <= 0 degrees
-// 03:00 <= 90 degrees
-// 06:00 <= 180 degrees
-// 09:00 <= 270 degrees
-// 12:00 <= 360 degrees
-// let angle = 0
-let angle = 90
-// let angle = 180
-// let angle = 270
-// let angle = 360
+
+// let angle = 0 //->12:00
+// let angle = 90//->03:00
+// let angle = 180//->06:00
+// let angle = 270//09:00
+let angle = 360//->12:00
 
 var whatTimeIsIt = function(angle) {
   // Your code here
@@ -31,12 +27,13 @@ var whatTimeIsIt = function(angle) {
 
   if (hrs.toString().length < 2) {
 		hrs = "0"+hrs.toString()
-		console.log(hrs);
+
   }
 
 
 
   res = hrs + ":" + mins
+	console.log(res);
   return res;
 }
 
