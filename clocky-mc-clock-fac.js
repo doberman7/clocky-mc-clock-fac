@@ -6,16 +6,25 @@
 // 06:00 <= 180 degrees
 // 09:00 <= 270 degrees
 // 12:00 <= 360 degrees
-// let angle = 0
+let angle = 0
 // let angle = 90
 // let angle = 180
 // let angle = 270
-let angle = 360
+// let angle = 360
 
 var whatTimeIsIt = function(angle) {
-	let res=""
-  // Your code here
-	res = angle / 30
+	// Your code here
+	res=""
+	let hrs=""
+	let mins=""
+	if(angle==0){
+		hrs=12
+	}{
+		hrs = angle / 30
+
+	}
+	res=hrs+":"+mins
+
 	console.log(res);
   return res;
 }
