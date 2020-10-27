@@ -31,7 +31,7 @@ var whatTimeIsIt = function(angle) {
 		//multiplicar por 60
 		remanente=remanente * 60
 		//rerdondear hacia arrriba
-		mins = Math.ceil(remanente);
+		mins = Math.floor(remanente);
 	}
 
 
