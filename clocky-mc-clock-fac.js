@@ -12,11 +12,11 @@
 // let angle = 180//->06:00
 // let angle = 270//09:00
 // let angle = 360//->12:00
- let angle = 40//// Expected: '01:20', instead got: '1.3333333333333333:00'
+// let angle = 40//// Expected: '01:20', instead got: '1.3333333333333333:00'
 
 
-// Expected: '01:30', instead got: '1.5:00'
-// Expected: '05:12', instead got: '5.215542686329925:00'
+// let angle = 45// Expected: '01:30', instead got: '1.5:00'
+// let angle = 70// Expected: '05:12', instead got: '5.215542686329925:00'
 // Expected: '01:51', instead got: '1.8620985622802868:00'
 // Expected: '08:47', instead got: '8.786524165048377:00'
 
@@ -35,11 +35,15 @@ var whatTimeIsIt = function(angle) {
 
 	// separar remanente
 	if (!(Math.trunc(hrs)==hrs)) {
-		remanente = hrs - Math.trunc(hrs)
-		console.log(remanente);
+		let remanente = hrs - Math.trunc(hrs)
+		hrs = hrs-remanente
+		//multiplicar por 60
+		remanente=remanente * 60
+		//rerdondear hacia arrriba
+		mins = Math.ceil(remanente);
 	}
-	//multiplicar por 60
-	//rerdondear hacia arrriba
+
+
 	//colocar en mins
   if (hrs.toString().length < 2) {
 		hrs = "0"+hrs.toString()
@@ -53,6 +57,10 @@ var whatTimeIsIt = function(angle) {
 	// console.log(res);
   return res;
 }
+
+
+
+
 
 
 
