@@ -51,13 +51,4 @@ var whatTimeIsIt = function(angle) {
 	console.log(res);
   return res;
 }
-
-
-
-
 whatTimeIsIt(angle)
-
-// console.log(  "hand angle: (12,0) = " + clock_angles( 3, 0));
-// console.log(  "hand angle: (10,10) = " + clock_angles( 10, 10 ));
-// console.log(  "hand angle: (7,10) = " + clock_angles( 7, 10 ));
-// console.log(  "hand angle: (12,59) = " + clock_angles( 12, 59 ));
